@@ -5,10 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cumpleaños - Majo y Melany</title>
     <link rel="stylesheet" href="estilo.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet">
             
     
 </head>
 <body>
+    <!-- Contenedor principal que envuelve el fondo -->
+<div class="gradient-bg">
+  
+  <!-- Filtro SVG opcional para un efecto de mezcla más orgánico (Gooey effect) -->
+  <svg xmlns="http://www.w3.org" class="svg-blur">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Las manchas (puedes agregar tantas como quieras) -->
+  <div class="gradients-container">
+    <div class="blob g1"></div>
+    <div class="blob g2"></div>
+    <div class="blob g3"></div>
+    <div class="blob g4"></div>
+    <div class="blob g5"></div>
+    <div class="blob g6"></div>
+    <div class="blob g7"></div>
+    
+   
+    
+  </div>
+</div>
+
 
     <!-- Carrusel Superior -->
     <div class="carrusel">
@@ -41,6 +72,9 @@
             <h1>Majo y Melany</h1>
             <p>Te invitan a su</p>
             <p class="evento">¡Cumpleaños!</p>
+            <p>Domingo 1 de febrero</p>
+            <p>A partir de las 3:00 pm</p>
+            <p class="evento">¡No faltes!</p>
         </div>
     </main>
 
@@ -66,3 +100,16 @@
             <img src="img/fugglers/fugler17.png" id="fugler17" />
             <img src="img/fugglers/fugler18.png" id="fugler18" />
             <img src="img/fugglers/fugler19.png" id="fugler19" />
+        </div>
+    </div>
+
+    <!-- Contenedor de Confetti -->
+    <div class="confetti-container"></div>
+
+    <script src="ani.js"></script>
+    <script>
+        // Llamar la función confetti al cargar
+        window.addEventListener('load', showConfetti);
+    </script>
+</body>
+</html>
